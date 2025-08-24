@@ -19,6 +19,6 @@ document.getElementById("login-btn").addEventListener("click", function (e) {
   ) {
     window.location.href = "./home.html";
   } else {
-    alert("Iinvalid!");
+    alert("Invalid!");
   }
 });
