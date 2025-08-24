@@ -25,7 +25,9 @@
         <div class="flex">
           <img src="./assets/Group.png" alt="" class="h-[50px]" />
           <div class="ml-3">
-            <h2 class="font-bold">$ <span id="available-balance">45000</span></h2>
+            <h2 class="font-bold">
+              $ <span id="available-balance">45000</span>
+            </h2>
             <p class="text-[#08080880]">Available Balance</p>
           </div>
         </div>
@@ -44,27 +46,41 @@
         </p>
       </div>
       <div class="min-h-[200px] grid grid-cols-3 gap-4 p-3">
-        <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+        <div
+          id="add-button"
+          class="border-2 border-gray-300 text-center p-3 rounded-xl cursor-pointer"
+        >
           <img src="./assets/wallet1.png" alt="" class="mx-auto" />
           <h2>Add Money</h2>
         </div>
-        <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+        <div
+          id="cash-out-button"
+          class="border-2 border-gray-300 text-center p-3 rounded-xl cursor-pointer"
+        >
           <img src="./assets/send1.png" alt="" class="mx-auto" />
           <h2>Cashout</h2>
         </div>
-        <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+        <div
+          class="border-2 border-gray-300 text-center p-3 rounded-xl cursor-pointer"
+        >
           <img src="./assets/money1.png" alt="" class="mx-auto" />
           <h2>Transfer Money</h2>
         </div>
-        <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+        <div
+          class="border-2 border-gray-300 text-center p-3 rounded-xl cursor-pointer"
+        >
           <img src="./assets/bonus1.png" alt="" class="mx-auto" />
           <h2>Get Bonus</h2>
         </div>
-        <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+        <div
+          class="border-2 border-gray-300 text-center p-3 rounded-xl cursor-pointer"
+        >
           <img src="./assets/purse1.png" alt="" class="mx-auto" />
           <h2>Pay Bill</h2>
         </div>
-        <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+        <div
+          class="border-2 border-gray-300 text-center p-3 rounded-xl cursor-pointer"
+        >
           <img src="./assets/transaction1.png" alt="" class="mx-auto" />
           <h2>Transactions</h2>
         </div>
@@ -73,7 +89,7 @@
     <!-- Form-sections -->
     <div class="all-form-sections max-w-lg mx-auto">
       <!-- Add money -->
-      <div>
+      <div id="add-money-parent">
         <h1 class="pt-5 pb-3 font-bold">Add Money</h1>
         <form action="" class="bg-white rounded-2xl p-8">
           <div class="mb-3">
@@ -123,6 +139,48 @@
             class="btn bg-[#0874f2] text-white mt-5 w-full rounded-3xl"
           >
             Add Money
+          </button>
+        </form>
+      </div>
+      <!-- Cashout -->
+      <div id="cash-out-parent" style="display: none">
+        <h1 class="pt-5 pb-3 font-bold">CashOut</h1>
+        <form action="" class="bg-white rounded-2xl p-8">
+          <div class="mb-3">
+            <label class="font-semibold" for="">Agent Number </label>
+            <br />
+            <input
+              id="agent-number"
+              type="text"
+              placeholder="Enter 11 digit number"
+              class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full"
+            />
+          </div>
+          <div class="mb-3">
+            <label class="font-semibold" for=""> Amount </label>
+            <br />
+            <input
+              id="withdraw-amount"
+              type="text"
+              placeholder="Enter Amount to withdraw"
+              class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full"
+            />
+          </div>
+          <div>
+            <label class="font-semibold" for=""> Pin Number </label>
+            <br />
+            <input
+              id="withdraw-pin"
+              type="text"
+              placeholder="Enter 4 digit pin number"
+              class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full"
+            />
+          </div>
+          <button
+            id="withdraw-btn"
+            class="btn bg-[#0874f2] text-white mt-5 w-full rounded-3xl"
+          >
+            Withdraw Money
           </button>
         </form>
       </div>
